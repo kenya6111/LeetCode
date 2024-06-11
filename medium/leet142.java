@@ -2,24 +2,35 @@ package medium;
 
 public class leet142 {
     public static  ListNode detectCycle(ListNode head) {
+        if (head == null || head.next == null) {
+            return null;
+        }
 
-        ListNode fast = head;
         ListNode slow = head;
+        ListNode fast = head;
 
-        while(fast!= null || fast.next != null){
-            fast=fast.next.next;
-            slow=slow.next;
-            if(slow== fast){
-                slow = head;
-                while (slow != fast) {
-                    slow = slow.next;
-                    fast = fast.next;
-                }
-                return slow; // サイクルの開始ノード
+        // サイクルの検出
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) { // スローとファストが一致した場合、サイクルが存在する
+                break;
             }
         }
 
-        return null;
+        // サイクルが存在しない場合
+        if (fast == null || fast.next == null) {
+            return null;
+        }
+
+        // サイクルの開始地点を見つける
+        slow = head;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow; // サイクルの開始ノード
     }
     public static void main(String[] args){
 
