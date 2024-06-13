@@ -42,7 +42,6 @@ public class leet2 {
            // ListNode result = addTwoNumbers(l1, l2);
 
 
-            
             ListNode l3 = new ListNode(9);
             l3.next = new ListNode(9);
             l3.next.next = new ListNode(9);
@@ -51,16 +50,12 @@ public class leet2 {
             l3.next.next.next.next.next = new ListNode(9);
             l3.next.next.next.next.next.next = new ListNode(9);
 
-            
-            
             ListNode l4 = new ListNode(9);
             l4.next = new ListNode(9);
             l4.next.next = new ListNode(9);
             l4.next.next.next = new ListNode(9);
 
-            
             ListNode result2 = addTwoNumbers(l3, l4);
-    
 
 
     }

@@ -3,7 +3,7 @@ package easy;
 public class leet206 {
 
     public static ListNode reverseList(ListNode head) {
-        //1 2 3 4 5 6 
+        //1 2 3 4 5 6
         ListNode prev = null; // 以前のノードを追跡
         ListNode current = head; // 現在のノード
         ListNode next = null; // 次のノード
