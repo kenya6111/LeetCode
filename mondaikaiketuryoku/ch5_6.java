@@ -26,7 +26,7 @@ public class ch5_6 {
           if (i == 0) return 0;
 
           // 答えを表す変数をINFで初期化する
-          long res = INF;
+          long res = INF; 
 
           // 足場i - 1から来た場合
           res = Math.min(res, rec(i - 1) + Math.abs(h[i] - h[i - 1]));
